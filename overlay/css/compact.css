@@ -1,0 +1,33 @@
+/* Compact presentation based on the user's v1.2 reference video. */
+.compact #overlay{width:328px;padding:4px}
+.compact .hud{border-radius:6px;background:linear-gradient(115deg,#141922e6,#090d14e8);border-color:#818a9845;box-shadow:0 2px 8px #0004}
+.compact .hud:before,.compact header{display:none}
+.compact .caption{padding:7px 10px 0;color:#aeb6bd;font-size:10px;letter-spacing:0}
+.compact .caption b{display:none}
+.compact .caption #timer{color:#e5c57c;font-weight:600;font-family:Consolas,monospace}
+.compact .lane{height:75px}
+.compact .past{left:8px;gap:6px;width:102px}
+.compact .future{left:128px;gap:8px}
+.compact .icon{border-radius:5px}
+.compact .icon.next-gcd{--size:52px;padding:2px}
+.compact .icon.next-gcd:before{left:-13px;top:15px;font-size:18px}
+.compact .icon.current{--size:42px;padding:2px}
+.compact .icon.past-recent{--size:30px}
+.compact .icon.future-2{--size:34px}
+.compact .icon.future-3{--size:28px}
+.compact .icon.future-4{--size:24px}
+.compact .icon.weave.mini{--size:18px}
+.compact .gcd-group{gap:3px}
+.compact footer{height:24px;padding:0 5px;gap:3px;background:#080b1140}
+.compact #axis-name{max-width:154px;font-size:9px}
+.compact #progress{font-size:9px}
+.compact .axis-picker{gap:0}
+.compact .axis-picker button{padding:0 3px;font-size:17px}
+.compact #import-open{font-size:17px;line-height:20px}
+.compact .weave-row{min-height:25px;margin:0 9px 3px;gap:7px;padding:0}
+.compact .weave-row.idle{display:none}
+.compact .weave-row>span:first-child{font-size:9px}
+.compact #pending{min-height:22px;gap:4px}
+.compact #pending .weave{--size:22px}
+.compact #cast{font-size:9px;max-width:110px}
+.compact .empty-lane{padding-left:128px}

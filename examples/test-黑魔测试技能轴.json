@@ -1,0 +1,3360 @@
+{
+  "id": "user-mvntpyaj",
+  "job": "BLM",
+  "name": "BLM · 排轴器导入",
+  "loop": false,
+  "loopFrom": 0,
+  "pre": [],
+  "gcds": [
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7421,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 3573,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 25796,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": "TINCTURE",
+          "optional": true,
+          "note": "爆发药可选提示，不自动确认服药"
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 158,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7421,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 157,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 3573,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7560,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 7561,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7421,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 158,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 25796,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 3573,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 7561,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7421,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7561,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 7562,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16506,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16506,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16506,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7560,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 158,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 25796,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7561,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7421,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 7561,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 3573,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7560,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 158,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 25796,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 16506,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16506,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16506,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16506,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 3573,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7561,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": "TINCTURE",
+          "optional": true,
+          "note": "爆发药可选提示，不自动确认服药"
+        }
+      ]
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 3573,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 162,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 7422,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 158,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 7421,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 162,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 25796,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 162,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 36988,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 7422,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 162,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 162,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 7422,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7561,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 7422,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 162,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 7422,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 7422,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7421,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 7561,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 3573,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 158,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 25796,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 36988,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7561,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 7561,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7421,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7421,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 158,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 3573,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 25796,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 7561,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": "TINCTURE",
+          "optional": true,
+          "note": "爆发药可选提示，不自动确认服药"
+        }
+      ]
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7561,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 158,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 7421,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7562,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 25796,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16506,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16506,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16506,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 16506,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16506,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 3573,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7560,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 158,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 7561,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7421,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 3573,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 157,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 25796,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7561,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 36988,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7421,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": "TINCTURE",
+          "optional": true,
+          "note": "爆发药可选提示，不自动确认服药"
+        }
+      ]
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 158,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7560,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7421,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 154,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36986,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 3573,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 3577,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 36989,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 3576,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        },
+        {
+          "id": 25796,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 16507,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    },
+    {
+      "id": 152,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 7421,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 16505,
+      "optional": false,
+      "note": "",
+      "weaves": [
+        {
+          "id": 149,
+          "optional": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": 25797,
+      "optional": false,
+      "note": "",
+      "weaves": []
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+file:///你的本地路径/ffxiv-AetherCue/overlay/index.html?mode=act

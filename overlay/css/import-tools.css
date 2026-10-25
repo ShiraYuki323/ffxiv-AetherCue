@@ -1,0 +1,16 @@
+.import-section{margin-top:18px;padding:11px 0;border-top:1px solid #ffffff12}
+.import-section>summary,#fflogs-auth>summary{cursor:pointer;color:#d4e1ea;font-size:12px;padding:4px 0;user-select:none}
+.import-section[open]>summary{color:var(--gold);margin-bottom:7px}
+#panel input[type=text],#panel input[type=password],#panel input[type=url]{width:100%;min-width:0;background:#09131e;border:1px solid #465d7066;border-radius:5px;padding:8px;color:#dbe4eb;font:11px/1.4 "Segoe UI","Microsoft YaHei",sans-serif}
+#panel input[type=text]:focus,#panel input[type=password]:focus,#panel input[type=url]:focus{outline:1px solid var(--gold)}
+.tool-field{display:flex;flex-direction:column;gap:6px;margin-top:10px;color:#91a6b7;font-size:11px}
+.tool-button{padding:8px 12px;border:1px solid #566f8366;background:#ffffff05;font-size:11px;margin:11px 0}
+.mode-options{display:flex;gap:18px;font-size:11px;margin:11px 0;color:#cad8e1}
+.mode-options label{cursor:pointer}.mode-options input,.focus-choice input{accent-color:var(--gold)}
+.focus-list{display:grid;grid-template-columns:1fr 1fr;gap:5px;max-height:205px;overflow:auto;margin:10px 0;padding-right:5px;overscroll-behavior:contain}
+.focus-choice{display:flex;align-items:center;gap:7px;min-width:0;padding:6px;border:1px solid #506b7e33;border-radius:5px;background:#ffffff03;cursor:pointer;color:#c4d3de;font-size:10px}
+.focus-choice img{width:25px;height:25px;border-radius:3px;flex:none}.focus-choice span{min-width:0;overflow-wrap:anywhere}.focus-choice small{display:block;color:#718a9e;font-size:9px;margin-top:2px}
+#focus-count{margin-left:auto;font-size:10px;color:#8da4b5;align-self:center}
+#focus-result,#fflogs-result{white-space:pre-wrap;overflow-wrap:anywhere;margin-top:6px}
+#fflogs-controls>.form-row{margin-top:12px}#fflogs-auth{border:1px solid #506b7e44;padding:8px 11px;border-radius:6px;margin-bottom:12px}
+#fflogs-help{overflow-wrap:anywhere}

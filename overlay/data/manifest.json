@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-10-25T11:46:57.474287+00:00",
+  "source": "https://github.com/thewakingsands/ffxiv-datamining-cn",
+  "actionCsvSHA256": "3fe3b8f8a9d6a0135824a48c229a54457a5fff6573b56b8f8c2ae6c59db6a225",
+  "shellRevision": "a880ff8721bc1f159bbadb1b8276b428f72a6fd7",
+  "count": 1232,
+  "englishMapped": 845,
+  "gcdRule": "CooldownGroup or AdditionalCooldownGroup == 58",
+  "note": "数据源快照；不声明与当前国服客户端版本完全一致。"
+}

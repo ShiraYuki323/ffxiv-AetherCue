@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>轴光 · FF14 技能轴</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/compact.css"><link rel="stylesheet" href="css/picker.css?v=4"><link rel="stylesheet" href="css/import-tools.css?v=4"><link rel="stylesheet" href="css/timeline.css?v=5">
+</head>
+<body>
+  <main id="overlay" aria-label="FF14 技能轴提示器">
+    <section class="hud">
+      <header><span class="eyebrow"><i id="signal"></i><span id="mode">准备中</span></span><span class="brand">轴 光 <small>AXIS</small></span><button id="settings" title="设置与导入 (I)" aria-label="打开设置">⚙</button></header>
+      <div class="caption"><span id="current-caption">当前 / 插入</span><span class="next-caption">下一个 <b>GCD</b></span><div class="timer-stack"><button id="timer" type="button">等待起手</button><span id="cast"></span></div></div>
+      <div id="lane" class="lane" aria-live="polite"><div id="pending"></div><span class="timeline-pointer">▸</span><span id="lane-overflow"></span><span id="lane-complete" hidden>轴已完成</span></div>
+      <footer><div class="axis-picker"><button id="prev" title="上一条轴 ([)" aria-label="上一条轴">‹</button><span id="axis-name"></span><button id="next" title="下一条轴 (])" aria-label="下一条轴">›</button></div><span id="progress">—</span><button id="import-open" title="导入技能轴 (I)" aria-label="导入技能轴">＋</button></footer>
+    </section>
+    <div id="status" class="status" role="status"></div>
+    <div id="drag-state">移动时请关闭 ACT 锁定位置和点击穿透</div>
+    <div id="diagnostics" class="diagnostics" hidden></div>
+    <div id="demo-controls" class="demo-controls" hidden><button id="demo-toggle">暂停演示</button><button id="demo-step">下一步</button><button id="reset">重置 R</button><a href="?mode=act&amp;diag=1">ACT 模式</a></div>
+  </main>
+  <dialog id="panel">
+    <div class="panel-header"><div><span class="eyebrow">ROTATION LIBRARY</span><h1>你的技能轴</h1></div><button id="close-panel" aria-label="关闭">×</button></div>
+    <div class="form-row"><div class="picker-field"><span id="job-label">职业</span><select id="job-select" aria-labelledby="job-label"></select></div><div class="picker-field"><span id="axis-label">当前技能轴</span><select id="axis-select" aria-labelledby="axis-label"></select></div></div>
+    <div class="library-actions"><button id="export-axis">导出技能轴</button><button id="export-settings">导出本地设置</button><button id="delete-axis">删除自定义轴</button><button id="panel-reset">重置进度</button></div>
+    <details id="focus-section" class="import-section"><summary>显示哪些技能 · 治疗／减伤轴</summary>
+      <p>仅列出这条原轴里出现过的技能。倒计时到零后等你释放；提前或延后释放都算完成，并从实际释放时刻开始计算下一技能的间隔。开战自动计时，也可点浮窗倒计时或按 T 开始。</p>
+      <div class="mode-options"><label><input type="radio" name="focus-mode" value="all" checked>完整技能轴</label><label><input type="radio" name="focus-mode" value="focus">只显示勾选技能</label></div>
+      <input id="focus-search" type="text" placeholder="搜索这条轴中的技能名称或 ID" aria-label="搜索显示技能">
+      <div class="library-actions"><button id="focus-all">全选</button><button id="focus-none">清空选择</button><span id="focus-count"></span></div>
+      <div id="focus-list" class="focus-list"></div><button id="focus-save" class="tool-button primary">保存显示设置</button><p id="focus-result" role="status"></p>
+    </details>
+    <div class="divider"></div>
+    <h2>导入技能轴</h2><p>支持你使用的 neko 排轴器导出的 fight.txt，也支持 XIV in the Shell 和本工具的 JSON 备份。</p>
+    <div class="form-row"><label>轴名称（可选）<input id="import-name" type="text" placeholder="例如：M11S 黑魔轴"></label><label>副本／首领（可选）<input id="import-encounter" type="text" placeholder="txt 不含副本时可自行填写"></label></div>
+    <label id="drop-zone" class="drop-zone">选择或拖入战斗文件 <span>.txt / .json</span><input id="file" type="file" accept=".txt,.json,application/json,text/plain"></label>
+    <textarea id="import-text" placeholder="在这里粘贴 JSON 内容…" spellcheck="false" aria-label="技能轴 JSON"></textarea>
+    <div class="import-actions"><button id="sample">填入示例</button><button id="preview" class="primary">解析预览</button><button id="save-import" class="primary" disabled>保存并使用</button></div>
+    <div id="import-result" role="status"></div><label id="partial-confirm" hidden><input type="checkbox" id="accept-partial">我已核对未识别技能，仍要保存不完整的轴</label>
+    <details id="fflogs-section" class="import-section"><summary>从 FFLogs 报告导入</summary>
+      <p id="fflogs-help">从本地浮窗直接读取公开报告，不需要启动服务。</p>
+      <div id="fflogs-controls" hidden>
+        <details id="fflogs-auth"><summary>本地 API 设置</summary><p>使用已有 V2 客户端或访问令牌。可保存到当前浮窗，或用“导出本地设置”备份到 local-settings.js 文件。</p>
+          <label class="tool-field">已有 V2 Access Token（有则直接填这里）<input id="fflogs-access-token" type="password" autocomplete="off" placeholder="Bearer Token，不是 V1 key"></label><p>或者使用已有 V2 客户端，由程序自动获取令牌：</p><label class="tool-field">Client ID<input id="fflogs-client-id" type="text" autocomplete="off"></label><label class="tool-field">Client Secret<input id="fflogs-client-secret" type="password" autocomplete="off"></label><label class="tool-field"><span><input id="fflogs-remember" type="checkbox" checked>保存在当前浮窗</span></label><button id="fflogs-configure" class="tool-button">连接 V2 API</button>
+        </details>
+        <label class="tool-field">FFLogs 报告链接<input id="fflogs-url" type="url" placeholder="https://cn.fflogs.com/reports/…?fight=1" autocomplete="off"></label>
+        <button id="fflogs-load" class="tool-button" disabled>读取战斗和角色</button>
+        <div class="form-row"><div class="picker-field"><span id="fflogs-fight-label">战斗／首领</span><select id="fflogs-fight" aria-labelledby="fflogs-fight-label"></select></div><div class="picker-field"><span id="fflogs-player-label">角色 · 自动识别职业</span><select id="fflogs-player" aria-labelledby="fflogs-player-label"></select></div></div>
+        <p id="fflogs-metadata"></p><button id="fflogs-import" class="tool-button primary" disabled>导入所选角色技能轴</button>
+      </div><p id="fflogs-result" role="status"></p>
+    </details>
+    <div class="divider"></div>
+    <div class="form-row"><label>浮窗缩放<input id="scale" type="range" min="0.7" max="1.8" step="0.05"></label><label>基础 GCD 秒数<input id="gcd" type="number" min="1" max="4" step="0.01" value="2.5"></label></div>
+    <p class="hint">面板打开时接受键盘输入，关闭后恢复游戏浮窗模式。支持选中文字及 Ctrl+A / Ctrl+C / Ctrl+V。操作前请关闭 ACT 点击穿透并锁定浮窗位置。倒计时为估算值。</p>
+  </dialog>
+  <script src="local-settings.template.js"></script><script src="local-settings.js" onerror="void 0"></script><script src="data/actions.js"></script><script src="data/jobs.js"></script><script src="data/special-actions.js?v=4"></script>
+  <script src="js/common.min.js"></script><script src="js/registry.js?v=4"></script><script src="js/parser.js?v=4"></script><script src="js/engine.js?v=4"></script><script src="js/importer.js?v=4"></script>
+  <script src="timelines/builtin.js"></script><script src="js/render.js?v=5"></script><script src="js/picker.js?v=4"></script><script src="js/focus-ui.js?v=4"></script><script src="js/fflogs-client.js?v=4"></script><script src="js/fflogs-ui.js?v=4"></script><script src="js/app.js?v=4"></script>
+</body>
+</html>
