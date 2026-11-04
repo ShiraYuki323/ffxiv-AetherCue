@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
-const root=path.resolve(__dirname,'..'),A=require('../overlay/js/registry.js'),{Parser,parseTs,actorId}=require('../overlay/js/parser.js'),{Engine}=require('../overlay/js/engine.js'),{importTimeline}=require('../overlay/js/importer.js');
+const root=path.resolve(__dirname,'..'),A=require('../overlay/js/registry.js'),{Parser,parseTs,actorId}=require('../overlay/js/parser.js'),{Engine}=require('../overlay/js/tracking.js'),{importTimeline}=require('../overlay/js/importer.js');
 const context={window:{}};for(const f of ['actions.js','jobs.js','special-actions.js'])vm.runInNewContext(fs.readFileSync(path.join(root,'overlay/data',f),'utf8'),context);const actions=context.window.ACTIONS;
 let count=0;const test=(name,fn)=>{try{fn();console.log('PASS '+name);count++;}catch(e){console.error('FAIL '+name);throw e;}};
 const axis={id:'test',job:'WAR',name:'test',loop:false,pre:[52],gcds:[{id:31,weaves:[7387,{id:40,optional:true}]},37,45,42,3549,25753,36925]};
@@ -17,6 +17,8 @@ test('auto attacks are filtered',()=>assert.equal(new Parser('10FF0001').feed(li
 test('other player death does not reset',()=>assert.equal(new Parser('10FF0001').feed(['25','time','10FF0002']),null));
 test('own death is detected',()=>assert.equal(new Parser('10FF0001').feed(['25','time','10FF0001']).type,'death'));
 test('combat line is decoded by in-game flag',()=>{const r=new Parser().feed(['260','time','1','0','0','1']);assert.equal(r.active,false);assert.equal(r.changed,true);});
+test('ACT-only combat changes preserve the actual game combat state',()=>{const r=new Parser().feed(['260','time','0','1','1','0']);assert.equal(r.active,true);assert.equal(r.changed,false);});
+test('incomplete or malformed combat lines cannot falsely signal game exit',()=>{for(const line of [['260','time'],['260','time','0','invalid','1','1'],['260','time','0','0','1']])assert.equal(new Parser().feed(line),null);});
 test('invalid timestamps never advance actions',()=>assert.equal(new Parser('10FF0001').feed(line(31,'1','10FF0001','21','invalid')),null));
 test('cast event includes cast length',()=>{const a=line(31,'','','20');a[2]='10FF0001';a[8]='2.8';assert.equal(new Parser('10FF0001').feed(a).duration,2800);});
 test('sequence cache stays bounded',()=>{const p=new Parser('10FF0001');for(let i=0;i<1000;i++)p.feed(line(31,String(i)));assert.ok(p.seen.size<=512);});

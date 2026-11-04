@@ -4,16 +4,16 @@
   class FocusUI{
     constructor(apply){
       this.apply=apply;this.axis=null;this.skills=[];this.selected=new Set();
-      $('focus-search').oninput=()=>this.paint();
+      $('focus-search').oninput=e=>{if(!e.isComposing&&e.target.dataset.composing!=='true')this.paint();};$('focus-search').addEventListener('compositionend',()=>this.paint());
       $('focus-all').onclick=()=>{this.selected=new Set(this.skills.map(v=>v.id));this.paint();};
       $('focus-none').onclick=()=>{this.selected.clear();this.paint();};
       document.querySelectorAll('input[name=focus-mode]').forEach(el=>el.onchange=()=>this.paint());
-      $('focus-save').onclick=()=>{try{const prefs={mode:document.querySelector('input[name=focus-mode]:checked').value,skills:[...this.selected]};this.apply(prefs);$('focus-result').textContent=prefs.mode==='focus'?'已保存：只跟随勾选技能，其他施法忽略。':'已恢复完整技能轴。';}catch(e){$('focus-result').textContent=e.message;}};
+      $('focus-save').onclick=()=>{try{const prefs={mode:document.querySelector('input[name=focus-mode]:checked').value,skills:[...this.selected]};this.apply(prefs);$('focus-result').textContent=prefs.mode==='focus'?'已保存：只跟随勾选技能，其他施法忽略。':prefs.mode==='generic'?'已保存：普通 GCD 使用通用图标；勾选技能提前释放会在原位标记。':'已恢复完整技能轴。';}catch(e){$('focus-result').textContent=e.message;}};
     }
     refresh(axis,prefs){
       this.axis=axis;const all=axis?A.flattenTimeline(axis).filter(v=>typeof v.id==='number'):[];this.uses=new Map();all.forEach(v=>this.uses.set(v.id,(this.uses.get(v.id)||0)+1));this.skills=[...new Map(all.map(v=>[v.id,v])).values()];
       this.selected=new Set(prefs&&prefs.skills||this.skills.map(v=>v.id));
-      document.querySelector('input[name=focus-mode][value="'+(prefs&&prefs.mode==='focus'?'focus':'all')+'"]').checked=true;
+      document.querySelector('input[name=focus-mode][value="'+(prefs&&['focus','generic'].includes(prefs.mode)?prefs.mode:'all')+'"]').checked=true;
       $('focus-search').value='';$('focus-result').textContent='';this.paint();
     }
     paint(){

@@ -26,7 +26,7 @@
       const at = parseTs(line[1]);
       if (type === '02') { this.setPlayer(line[2]); return {type: 'player', id: this.me, name: line[3] || ''}; }
       if (type === '01') { this.seen.clear(); return {type: 'zone', id: line[2], name: line[3] || ''}; }
-      if (type === '260') return {type: 'combat', active: line[3] === '1', changed: line[5] === '1',at};
+      if (type === '260') return line.length>=6&&['0','1'].includes(line[3])&&['0','1'].includes(line[5])?{type:'combat',active:line[3]==='1',changed:line[5]==='1',at}:null;
       if (type === '12') return {type: 'job', jobId: parseInt(line[2], 16)};
       if (type === '25') return this.me && actorId(line[2]) === this.me ? {type: 'death'} : null;
       if (!['20', '21', '22', '23'].includes(type)) return null;

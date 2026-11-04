@@ -1,5 +1,5 @@
 (function (root, factory) {
-  const api = factory(typeof module === 'object' && module.exports ? require('./registry.js') : root.Axis);
+  const api = factory(typeof module === 'object' && module.exports ? {...require('./registry.js'),...require('./phases.js')} : root.Axis);
   if (typeof module === 'object' && module.exports) module.exports = api;
   else Object.assign(root.Axis = root.Axis || {}, api);
 })(typeof globalThis !== 'undefined' ? globalThis : this, function (A) {
@@ -11,7 +11,9 @@
     if (data.gcds) {
       const axis=A.normalizeTimeline({...data,name:options.name||data.name,encounter:options.encounter||data.encounter});
       const unknown=[...new Set([...axis.pre,...axis.gcds.flatMap(g=>[g,...g.weaves])].filter(v=>!actions[v.id]).map(v=>'ID '+v.id))];
-      return {axis,warnings:unknown.length?['轴中存在当前目录没有的技能，请核对后再使用。']:[],unknown};
+      const warnings=unknown.length?['轴中存在当前目录没有的技能，请核对后再使用。']:[];
+      if(!axis.phases){axis.phases=A.suggestPhases(axis);axis.phaseConfirmed=false;if(axis.phases.length>1)warnings.push('已建议 '+axis.phases.length+' 个阶段，请到阶段管理核对。');}
+      return {axis,warnings,unknown};
     }
     if (!Array.isArray(data.actions) || data.actions.length > 50000) throw Error('找不到战斗 actions，或条目数量过大');
     const job = String(options.job || data.config && data.config.job || '').toUpperCase();
@@ -21,9 +23,9 @@
       const k = key(s); if (!names.has(k)) names.set(k, []); if (!names.get(k).includes(a)) names.get(k).push(a);
     }));
     const gcds = [], pre = [], warnings = [], unknown = [];
-    let ignored = 0, virtual=0;
+    let ignored = 0, virtual=0, waitMs=0, waits=0;
     for (const entry of data.actions) {
-      if (entry.type !== 'Skill') { ignored++; continue; }
+      if (entry.type !== 'Skill') {if(entry.type==='Wait'&&Number.isFinite(entry.waitDuration)&&entry.waitDuration>0){waitMs+=Math.min(entry.waitDuration*1000,86400000);waits++;}else ignored++;continue;}
       const candidates = Number.isInteger(entry.skillId) ? [actions[entry.skillId]].filter(Boolean) : names.get(key(entry.skillName)) || [];
       const matching = candidates.filter(a => (a.jobs || []).includes(job));
       const shared = candidates.filter(a => a.job === 'ALL');
@@ -32,16 +34,19 @@
       if (ids.length !== 1) { unknown.push(String(entry.skillName || entry.skillId || '空技能名')); continue; }
       const a = actions[ids[0]];
       const time=entry.atMs===undefined?{}:{atMs:entry.atMs};
-      if (a.gcd) gcds.push({id: a.id, ...time,weaves: []}); else (gcds.length ? gcds[gcds.length - 1].weaves : pre).push({id: a.id,...time,optional:a.optional===true});
+      if (a.gcd) {gcds.push({id: a.id, ...time,...(waitMs?{breakBeforeMs:waitMs}:{}),weaves: []});waitMs=0;} else (gcds.length ? gcds[gcds.length - 1].weaves : pre).push({id: a.id,...time,optional:a.optional===true});
       if(a.virtual)virtual++;
     }
     if (unknown.length) warnings.push(`${unknown.length} 个技能无法唯一识别，尚未导入。请核对后再使用。`);
     if (ignored) warnings.push(`忽略了 ${ignored} 个等待、时间跳转或资源设置；此轴仅追踪技能顺序。`);
+    if(waits)warnings.push(`保留 ${waits} 段明确等待，用于分 P 建议；不会据此编造逐技能时间点。`);
     if(virtual)warnings.push(`保留 ${virtual} 次爆发药可选提示；暂不自动确认服药，不计漏插。`);
     gcds.forEach((g, i) => { if (g.weaves.length > 2) warnings.push(`第 ${i + 1} 个 GCD 后有 ${g.weaves.length} 个能力技，全部按原顺序保留。`); });
     if (!gcds.length) throw Error('未识别出 GCD。请检查职业或技能数据；没有保存任何内容。');
     const name=options.name||(data.name&&data.name!=='(anonymous line)'?data.name:`${job} · 排轴器导入`);
     const axis = A.normalizeTimeline({id: 'user-' + Date.now().toString(36), job, name, loop: false, pre, gcds,encounter:options.encounter||data.encounter,durationMs:data.durationMs});
+    axis.phases=A.suggestPhases(axis);axis.phaseConfirmed=false;
+    if(axis.phases.length>1)warnings.push('已建议 '+axis.phases.length+' 个阶段，请到阶段管理核对；长间隔不一定是真实换 P。');
     return {axis, warnings, unknown};
   }
   return {importTimeline};

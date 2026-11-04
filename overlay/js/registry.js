@@ -10,7 +10,17 @@
     const item=v&&v.id==='TINCTURE';
     if (!v || !item&&(!Number.isSafeInteger(v.id) || v.id < 1 || v.id > 1000000)) throw Error('技能 ID 必须是正整数；爆发药使用 TINCTURE 提示键');
     const result={id: v.id, optional: item || v.optional === true, note: String(v.note || (item?'爆发药可选提示，不自动确认服药':'')).slice(0, 200)};
-    if(v.atMs!==undefined){if(!Number.isFinite(v.atMs)||Math.abs(v.atMs)>86400000)throw Error('技能时间点无效');result.atMs=v.atMs;}return result;
+    if(v.atMs!==undefined){if(!Number.isFinite(v.atMs)||Math.abs(v.atMs)>86400000)throw Error('技能时间点无效');result.atMs=v.atMs;}
+    if(Number.isInteger(v.sourceIndex)&&v.sourceIndex>=-1&&v.sourceIndex<10000)result.sourceIndex=v.sourceIndex;
+    if(Number.isFinite(v.breakBeforeMs)&&v.breakBeforeMs>0&&v.breakBeforeMs<=86400000)result.breakBeforeMs=v.breakBeforeMs;
+    return result;
+  }
+  function normalizePhases(phases,count){
+    if(!Array.isArray(phases)||!phases.length||phases.length>200)throw Error('阶段数量需要在 1～200 之间');
+    return phases.map((p,i)=>{
+      if(!p||!Number.isInteger(p.start)||p.start<0||p.start>=count||i===0&&p.start!==0||i>0&&p.start<=phases[i-1].start)throw Error('阶段起点必须从第一个 GCD 开始，且按顺序排列，不能重叠或为空');
+      return{name:String(p.name||('阶段 '+(i+1))).slice(0,60),start:p.start,...(typeof p.label==='string'&&p.label.trim()?{label:p.label.trim().slice(0,24)}:{})};
+    });
   }
   function normalizeTimeline(input) {
     if (!input || typeof input !== 'object') throw Error('轴必须是 JSON 对象');
@@ -33,7 +43,8 @@
     }
     if(focused){result.mode='focus';result.steps=gcds.map(v=>action(v));}
     if(Number.isFinite(input.durationMs)&&input.durationMs>0&&input.durationMs<=86400000)result.durationMs=input.durationMs;
-    if(input.display&&typeof input.display==='object')result.display={mode:input.display.mode==='focus'?'focus':'all',skills:Array.isArray(input.display.skills)?[...new Set(input.display.skills.filter(v=>Number.isSafeInteger(v)&&v>0&&v<=1000000))]:[]};
+    if(input.display&&typeof input.display==='object')result.display={mode:['focus','generic'].includes(input.display.mode)?input.display.mode:'all',skills:Array.isArray(input.display.skills)?[...new Set(input.display.skills.filter(v=>Number.isSafeInteger(v)&&v>0&&v<=1000000))]:[]};
+    if(input.phases!==undefined){result.phases=normalizePhases(input.phases,gcds.length);result.phaseConfirmed=input.phaseConfirmed===true;}
     return result;
   }
   function flattenTimeline(input){
@@ -44,7 +55,7 @@
     const axis=normalizeTimeline(input),selected=new Set(ids),steps=flattenTimeline(axis).filter(v=>typeof v.id==='number'&&selected.has(v.id));
     if(!steps.length)throw Error('请至少勾选一个这条轴中实际存在的技能');
     const loopFrom=steps.findIndex(v=>v.gcdIndex>=axis.loopFrom);
-    return normalizeTimeline({id:axis.id,job:axis.job,name:axis.name+' · 指定技能',mode:'focus',steps,pre:[],loop:axis.loop&&loopFrom>=0,loopFrom:Math.max(0,loopFrom),encounter:axis.encounter,durationMs:axis.durationMs});
+    return normalizeTimeline({id:axis.id,job:axis.job,name:axis.name+' · 指定技能',mode:'focus',steps:steps.map(v=>({...v,sourceIndex:v.gcdIndex})),pre:[],loop:axis.loop&&loopFrom>=0,loopFrom:Math.max(0,loopFrom),encounter:axis.encounter,durationMs:axis.durationMs});
   }
   function stepIndex(axis, index, steps = 1) {
     let next = index;
@@ -54,5 +65,5 @@
     }
     return next;
   }
-  return {JOB_CODES, normalizeTimeline, stepIndex,flattenTimeline,focusTimeline};
+  return {JOB_CODES, normalizeTimeline, normalizePhases, stepIndex,flattenTimeline,focusTimeline};
 });

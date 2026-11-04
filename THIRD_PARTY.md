@@ -1,5 +1,7 @@
 # 数据与第三方组件来源
 
+- 离线基础拼音字典：`sxei/pinyinjs` 的 `dict/pinyin_dict_notone.js`，https://github.com/sxei/pinyinjs 。按 MIT 许可使用，许可证见 `PinyinJS-LICENSE.txt`；来源与原文件 SHA-256 记录在 `overlay/data/pinyin-source.json`。拼音候选界面和交互另行实现，不使用云端输入接口。
+
 - `overlay/js/common.min.js`：OverlayPlugin 官方网页接口桥接文件，原样取自 https://overlayplugin.github.io/OverlayPlugin/assets/shared/common.min.js 。项目和许可证以 https://github.com/OverlayPlugin/OverlayPlugin 为准。
 - 中文技能名称、图标编号、职业与冷却组数据：国服客户端数据导出仓库 https://github.com/thewakingsands/ffxiv-datamining-cn 。构建时对关键字段作了校验，数据文件 SHA-256 记录在 `overlay/data/manifest.json`。
 - 英文技能名及键名与动作 ID 的事实对应关系： https://github.com/xivintheshell/xivintheshell 的 `src/Game/Data/Jobs` 和 `src/Game/Data/Shared`；来源提交记录在 manifest 中。本包没有包含排轴器实现代码。

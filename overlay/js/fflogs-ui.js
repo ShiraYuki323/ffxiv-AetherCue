@@ -4,7 +4,9 @@
   class FFLogsUI{
     constructor(receive){
       this.receive=receive;this.ready=false;this.serial=0;this.players=[];this.fights=[];this.zone=null;this.loadedURL='';
-      let config=(window.AXIS_LOCAL_CONFIG||{}).fflogs||{};try{config=JSON.parse(localStorage.getItem('ffxiv-axis:fflogs-api'))||config;}catch(_){}
+      const usable=v=>v&&typeof v==='object'&&(String(v.accessToken||'').trim()||String(v.clientId||'').trim()&&String(v.clientSecret||'').trim());
+      let config=(window.AXIS_LOCAL_CONFIG||{}).fflogs||{};this.configSource=usable(config)?'本地文件':'未配置';
+      try{const saved=JSON.parse(localStorage.getItem('ffxiv-axis:fflogs-api'));if(usable(saved)){config=saved;this.configSource='当前浮窗存储';}}catch(_){}
       this.client=new A.FFLogsClient(config);A.fflogsClient=this.client;
       this.fightPicker=new A.Picker($('fflogs-fight'),'先读取战斗');this.playerPicker=new A.Picker($('fflogs-player'),'请选择角色');
       $('fflogs-section').addEventListener('toggle',()=>{if($('fflogs-section').open)this.connect();});
@@ -16,8 +18,8 @@
     message(text){$('fflogs-result').textContent=text;}
     async connect(){
       this.ready=this.client.configured;$('fflogs-help').textContent='浮窗直接连接 FFLogs，自动识别副本、首领和职业；不启动本机服务。';$('fflogs-controls').hidden=false;$('fflogs-auth').open=!this.ready;$('fflogs-load').disabled=!this.ready;
-      $('fflogs-client-id').value=this.client.config.clientId||'';if(this.ready)$('fflogs-client-secret').placeholder='已读取本地配置，留空沿用';
-      this.message(this.ready?'已读取本地 V2 配置，请读取报告。':'请填写 V2 客户端或访问令牌。');
+      $('fflogs-client-id').value=this.client.config.clientId||'';$('fflogs-client-secret').value=this.client.config.clientSecret||'';$('fflogs-access-token').value=this.client.config.accessToken||'';if(this.ready)$('fflogs-client-secret').placeholder='已读取本地配置，留空沿用';
+      this.message(this.ready?'已读取 V2 配置（'+this.configSource+'），可以读取报告。':'请填写 V2 客户端或访问令牌。');
     }
     async request(route,data){
       if(route==='config'){const r=await this.client.configure(data);if(data.remember)localStorage.setItem('ffxiv-axis:fflogs-api',JSON.stringify(this.client.config));else localStorage.removeItem('ffxiv-axis:fflogs-api');return r;}
@@ -35,7 +37,7 @@
     updateMetadata(){const fight=this.fights.find(f=>String(f.id)===$('fflogs-fight').value),player=this.players.find(p=>String(p.id)===$('fflogs-player').value);$('fflogs-metadata').textContent=[this.zone&&this.zone.name,fight&&fight.name,player&&('职业：'+((window.JOBS.find(j=>j.code===player.job)||{}).name||player.job))].filter(Boolean).join(' · ');}
     async configure(){
       $('fflogs-configure').disabled=true;this.message('正在验证 FFLogs API…');
-      try{await this.request('config',{clientId:$('fflogs-client-id').value,clientSecret:$('fflogs-client-secret').value,accessToken:$('fflogs-access-token').value,remember:$('fflogs-remember').checked});this.ready=true;$('fflogs-client-secret').value='';$('fflogs-access-token').value='';$('fflogs-load').disabled=false;$('fflogs-auth').open=false;this.message('V2 API 配置已接受，请读取报告验证访问权限。');}
+      try{await this.request('config',{clientId:$('fflogs-client-id').value,clientSecret:$('fflogs-client-secret').value,accessToken:$('fflogs-access-token').value,remember:$('fflogs-remember').checked});this.configSource=$('fflogs-remember').checked?'当前浮窗存储':'本次会话';this.ready=true;$('fflogs-client-secret').value='';$('fflogs-access-token').value='';$('fflogs-load').disabled=false;$('fflogs-auth').open=false;this.message('V2 API 配置已接受，请读取报告验证访问权限。');}
       catch(e){this.message(e.message);}finally{$('fflogs-configure').disabled=false;}
     }
     async load(){

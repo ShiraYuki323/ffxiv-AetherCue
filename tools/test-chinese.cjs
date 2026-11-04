@@ -1,0 +1,16 @@
+'use strict';
+const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),assert=require('node:assert/strict'),{PinyinModel}=require('../overlay/js/chinese-input.js');
+const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../overlay/data/pinyin.js'),'utf8'),context);const model=new PinyinModel(context.window.AXIS_PINYIN);
+assert.ok(Object.keys(context.window.AXIS_PINYIN).length>=400);
+assert.ok(model.suggest('ni').some(c=>c.text==='你'&&c.consume===2));
+assert.equal(model.suggest('zhuanchang')[0].text,'转场');
+assert.equal(model.suggest('kaichang')[0].text,'开场');
+assert.equal(model.suggest('lingjihun')[0].text,'灵极魂');
+assert.equal(model.suggest('shengminghuishengfa')[0].text,'生命回生法');
+assert.equal(model.suggest('nihao')[0].text,'你好');
+assert.ok(model.suggest('woaizhongwen').some(c=>c.text==='我'&&c.consume===2));
+assert.ok(model.suggest('zh').length>5);
+assert.deepEqual(model.suggest('P1.2'),[]);
+assert.deepEqual(model.suggest('<script>'),[]);
+assert.deepEqual(model.suggest(''),[]);
+console.log('PASS offline pinyin dictionary, common phrases, skill names, partial syllables, multi-syllable consumption, and non-pinyin rejection');

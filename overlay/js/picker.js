@@ -66,6 +66,7 @@
       this.select.value=value;this.close(true);this.select.dispatchEvent(new Event('change',{bubbles:true}));
     }
     keydown(e) {
+      if(e.isComposing||e.keyCode===229||e.target?.dataset?.composing==='true')return;
       if(e.key==='Escape'&&this.opened){e.preventDefault();e.stopPropagation();this.close(true);return;}
       if(e.key==='Tab'){this.close();return;}
       if(['ArrowDown','ArrowUp','Home','End'].includes(e.key)){

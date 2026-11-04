@@ -78,7 +78,7 @@
         actions.push(/\b(tincture|gemdraught)\b|[力巧智意耐]力之[幻宝灵]药/i.test(name)?{type:'Skill',skillName:'Tincture',atMs:Math.round(e.timestamp-combatStart)}:{type:'Skill',skillId:id,skillName:name||String(id),atMs:Math.round(e.timestamp-combatStart)});
       });
       if(!actions.length)throw Error('该角色没有完成施法事件');const zone=metadata.zone||{},encounter={name:fight.name,id:fight.encounterID,zoneId:zone.id,zoneName:zone.name,playerName:player.name,playerId,fightId,reportCode:p.code,source:'fflogs'};
-      return{record:{name:fight.name+' · '+player.job+' · '+player.name,fileType:'Record',config:{job:player.job},durationMs:fight.endTime-combatStart,encounter,actions},castCount:actions.length,player,fight,zone};
+      return{record:{name:fight.name+' · '+player.job,fileType:'Record',config:{job:player.job},durationMs:fight.endTime-combatStart,encounter,actions},castCount:actions.length,player,fight,zone};
     }
   }
   return{FFLogsClient,parseFFLogsURL,flattenFFLogsPlayers};
