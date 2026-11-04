@@ -97,6 +97,7 @@
     }
     ability(id,at=this.clock()){
       if(!Number.isFinite(at))return'ignored';
+      if(this.cast?.id===id)this.cast=null;
       if(this.sourceTracker){
         this.sourceTracker.ability(id,at);
         if(this.sourceTracker.activePhase!==this.activePhase){const p=this.sourceTracker.activePhase;this.switchPhase(p,at,false);}

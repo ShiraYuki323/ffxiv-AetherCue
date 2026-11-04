@@ -75,7 +75,7 @@
     if(!engine)return;
     if(e.type==='death'){engine.reset();status('角色死亡 · 进度已重置');}
     if(e.type==='cast')engine.cast=engine.axis.mode!=='focus'||engine.axis.gcds.some(v=>v.id===e.id)?e:null;
-    if(e.type==='cancel')engine.cast=null;
+    if(e.type==='cancel'&&engine.cast?.id===e.id)engine.cast=null;
     if(e.type==='ability'){const result=engine.ability(e.id,e.at);if(real)status(result==='miss'?'未匹配技能：'+((window.ACTIONS[e.id]||{}).name||e.id)+' · 进度保持':result==='out-of-order'?'等待当前提示技能，进度保持':result==='align-wait'?engine.message:result==='early'?'已记录提前释放，图标保留在原位置':'');}
   }
   function makeLine(id){const l=Array(54).fill('');l[0]='21';l[1]=new Date().toISOString();l[2]='10FF0001';l[3]='演示角色';l[4]=id.toString(16).toUpperCase();l[5]=(window.ACTIONS[id]||{}).name||'';l[44]=(++seq).toString(16);return{line:l};}
@@ -178,7 +178,7 @@
   $('import-text').oninput=invalidate;$('preview').onclick=preview;$('save-import').onclick=saveImport;
   $('import-name').oninput=$('import-encounter').oninput=invalidate;
   $('accept-partial').onchange=()=>{$('save-import').disabled=!previewResult||previewResult.unknown.length>0&&!$('accept-partial').checked;};
-  $('sample').onclick=()=>{$('import-name').value='';$('import-encounter').value='';$('import-text').value=JSON.stringify({name:'战士 · 导入演示',fileType:'Record',config:{job:'WAR'},actions:['Heavy Swing','Maim','Infuriate',"Storm's Eye",'Upheaval'].map(skillName=>({type:'Skill',skillName}))},null,2);preview();};
+  $('sample').onclick=()=>{const sample=builtins[0];if(!sample)return;$('import-name').value='';$('import-encounter').value='';$('import-text').value=JSON.stringify(sample,null,2);preview();};
   $('file').onchange=()=>readFile($('file').files[0]);$('drop-zone').ondragover=e=>{e.preventDefault();$('drop-zone').classList.add('drag');};$('drop-zone').ondragleave=()=>$('drop-zone').classList.remove('drag');$('drop-zone').ondrop=e=>{e.preventDefault();$('drop-zone').classList.remove('drag');readFile(e.dataTransfer.files[0]);};
   $('scale').oninput=()=>{document.documentElement.style.setProperty('--scale',$('scale').value);try{store.write('scale',Number($('scale').value));}catch(_){}};
   $('gcd').onchange=()=>{if(engine){engine.baseGcd=baseGcd();engine.gcdMs=baseGcd();}try{store.write('gcd',baseGcd()/1000);}catch(_){}};

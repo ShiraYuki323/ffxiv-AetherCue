@@ -52,14 +52,16 @@ def main():
                 shell[int(m[2])]={'en':m[4],'key':m[1]}
     actions = {}
     for id, r in byid.items():
-        if not r[1] or not r[3].isdigit() or int(r[3])<=0 or r[4] not in ['2','3','4'] or r[57]=='True': continue
+        if not r[1] or not r[3].isdigit() or int(r[3])<=0 or (r[4] not in ['2','3','4'] and id != 3) or r[57]=='True': continue
         allowed=categories.get(int(r[51]),[])
         if not allowed: continue
         # Ignore NPC-only variants, but retain player replacement/follow-up actions.
         if int(r[11])<0 and r[14]!='True' and id not in shell: continue
         gcd = int(r[42])==58 or int(r[43])==58
         a={'id':id,'name':r[1],'icon':int(r[3]),'gcd':gcd,'recast':int(r[41])/10,'level':int(r[13]),'jobs':allowed,'job':allowed[0] if len(allowed)==1 else 'ALL'}
-        a.update(shell.get(id,{})); actions[id]=a
+        a.update(shell.get(id,{}))
+        if id == 3: a.update(en='Sprint', key='SPRINT')
+        actions[id]=a
     assert actions[31]['gcd'] and not actions[7389]['gcd'] and actions[9]['gcd']
     data=ROOT/'overlay'/'data'; data.mkdir(parents=True,exist_ok=True)
     meta={'generatedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source':'https://github.com/thewakingsands/ffxiv-datamining-cn','actionCsvSHA256':hashlib.sha256((cache/'Action.csv').read_bytes()).hexdigest(),'shellRevision':tree['sha'],'count':len(actions),'englishMapped':sum('en' in a for a in actions.values()),'gcdRule':'CooldownGroup or AdditionalCooldownGroup == 58','note':'数据源快照；不声明与当前国服客户端版本完全一致。'}

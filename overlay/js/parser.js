@@ -33,7 +33,7 @@
       if (!this.me || actorId(line[2]) !== this.me) { this.filtered++; return null; }
       const id = parseInt(line[4], 16);
       if (!Number.isFinite(id) || id === 7 || id === 8) return null;
-      if (type === '20') return {type: 'cast', id, at, duration: Number(line[8]) * 1000};
+      if (type === '20') {const duration=Number(line[8])*1000;return Number.isFinite(at)&&Number.isFinite(duration)&&duration>0&&duration<=600000?{type:'cast',id,at,duration}:null;}
       if (type === '23') return {type: 'cancel', id};
       if (!Number.isFinite(at)) return null;
       const seq = line[44];

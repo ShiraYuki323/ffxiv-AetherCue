@@ -6,6 +6,7 @@
 .next-caption{position:absolute;left:143px;top:7px;color:var(--gold)}
 .caption b{display:none!important}.timer-stack{margin-left:auto;display:flex;align-items:flex-end;gap:1px;flex-direction:column;max-width:148px}
 #timer{font-size:11px;padding:0;border:0;line-height:15px;background:transparent;color:var(--gold)}#timer.skill-due{color:#ff9c77;text-shadow:0 0 7px #f66a4433}
+#timer.casting{color:#a9d8ed}
 #cast{font-size:9px;margin:0;max-width:126px;color:#93b8cd;min-height:0;line-height:12px}
 .lane,.compact .lane{height:112px;display:block;position:relative;overflow:hidden}
 #pending,.compact #pending{position:absolute;inset:0;display:block;min-height:0;pointer-events:none}

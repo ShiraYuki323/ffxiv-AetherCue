@@ -24,7 +24,7 @@
       s.carry.slice(0,3).forEach((v,i)=>items.push({key:'w:'+v.owner+':'+v.slot,action:v,role:'weave stale',x:20+i*28,y:98,size:24,opacity:.65}));return items;
     }
     paint(engine){
-      const s=engine.snapshot(),fresh=this.engine!==engine||this.epoch!==s.epoch;
+      const now=Date.now(),s=engine.snapshot(now),fresh=this.engine!==engine||this.epoch!==s.epoch;
       if(fresh){this.clear();this.engine=engine;this.epoch=s.epoch;this.key='';}
       const key=engine.axis.id+':'+s.revision;
       if(key!==this.key){
@@ -47,18 +47,20 @@
       const current=this.lane.querySelector('.current:not(.timeline-exit)');if(current){current.style.setProperty('--arc',(engine.axis.mode==='focus'||s.stopped?0:s.ratio*360)+'deg');current.classList.toggle('urgent',!s.stopped&&s.urgent&&s.pending.some(v=>!v.optional&&!v.early));}
       this.pending.querySelectorAll('.weave.required-now:not(.optional):not(.timeline-exit)').forEach(el=>el.classList.toggle('urgent',!s.stopped&&s.urgent&&!el.classList.contains('early-used')));
       $('current-caption').textContent=engine.axis.mode==='focus'?'刚用过':'当前 / 插入';document.querySelector('.caption b').textContent=engine.axis.mode==='focus'?'指定技能':'GCD';
-      let text=s.current?(s.left>0?'≈ '+(s.left/1000).toFixed(1)+' s':'等待施法'):'等待起手';
+      const cast=s.cast,castLeft=cast&&Number.isFinite(cast.at)&&Number.isFinite(cast.duration)?Math.max(0,cast.duration-(now-cast.at)):0;
+      let text=s.next===null?'轴已完成':s.current?(s.left>0?'≈ '+(s.left/1000).toFixed(1)+' s':'0.0 s · 等待释放'):'等待起手';
       if(engine.axis.mode==='focus')text=s.next===null?'本条轴已完成':!s.focusTimed?'未附时间点':s.focusLeft===null?'等待开战 · 点此计时':s.focusLeft>0?(s.focusLeft/1000).toFixed(1)+' s':'已到时 · 等待释放';
       if(s.phaseEmpty)text='本 P 无勾选技能';
       if(s.waitingStart)text=s.alignCandidates?'正在对齐 · '+s.alignCandidates+' 候选':'等待本 P 起手';
+      if(castLeft>0)text='读条 '+(castLeft/1000).toFixed(1)+' s';
       if(s.phaseEmpty)text='本 P 无勾选技能';
       if(s.stopped)text=s.manualPaused?'停手 '+(s.stopElapsed/1000).toFixed(1)+' s':s.stopLeft===null?'转场 · 等待恢复':s.stopLeft>0?'转场参考 '+(s.stopLeft/1000).toFixed(1)+' s':'等待恢复输出';
-      $('timer').textContent=text;$('timer').classList.toggle('skill-due',engine.axis.mode==='focus'&&s.focusLeft===0);$('timer').title=engine.axis.mode==='focus'?'到零不会跳过；提前或延后释放都从实际释放时刻重新计算下一技能。首次可点此或按 T 开始计时。':'GCD 估算倒计时';
+      $('timer').textContent=text;$('timer').classList.toggle('skill-due',engine.axis.mode==='focus'&&s.focusLeft===0);$('timer').classList.toggle('casting',castLeft>0&&!s.stopped);$('timer').title=engine.axis.mode==='focus'?'到零不会跳过；提前或延后释放都从实际释放时刻重新计算下一技能。首次可点此或按 T 开始计时。':'读条时显示 ACT 读条剩余时间；其余为 GCD 估算，归零后等待实际释放，不会自动推进。';
       if($('phase-current')){
         $('phase-current').textContent=(s.phaseLabel||'P'+(s.phase+1))+' · '+s.phaseName;$('phase-prev').disabled=s.phase===0;$('phase-next').disabled=s.phase+1>=s.phaseCount;$('phase-pause').textContent=s.manualPaused?'恢复跟随':'手动停手';$('phase-pause').setAttribute('aria-pressed',String(s.manualPaused));
         const state=$('phase-state');state.hidden=!s.stopped&&!s.waitingStart&&!s.preparations;state.textContent=(s.manualPaused?'手动停手 · 普通 GCD 暂停':s.autoStopped?'转场停手 · 到零仍等待实际起手':s.waitingStart?'等待实际起手对齐':'')+(s.preparations?' · 灵极魂已用 ×'+s.preparations:'');
       }
-      const cast=s.cast,left=cast?Math.max(0,cast.duration-(Date.now()-cast.at)):0;$('cast').textContent=left>0?((window.ACTIONS[cast.id]||{}).name||'读条')+' '+(left/1000).toFixed(1)+'s':'';
+      $('cast').textContent=castLeft>0?((window.ACTIONS[cast.id]||{}).name||'读条')+(s.stopped?' · '+(castLeft/1000).toFixed(1)+' s':''):'';
     }
   }
   A.Renderer=Renderer;
